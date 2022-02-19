@@ -1,18 +1,50 @@
-<mat-sidenav-container class="sidenav-container mat-app-background">
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        mat-icon-button
-        class="ml-2"
-        aria-label="Botão para voltar à pagina inicial"
-      >
-        <mat-icon aria-label="Ícone de página inicial">home</mat-icon>
-      </button>
+<mat-toolbar class="mat-elevation-z8" *ngIf="sidenav.mode === 'over'">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+</mat-toolbar>
 
-      <span class="flex-spacer"></span>
-    </mat-toolbar>
-    <div class="container">
-      <ng-content></ng-content>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+      class="avatar mat-elevation-z8"
+      src="../../../../assets/images/profile.png"
+    />
+
+    <h4 class="name">André Boniatti</h4>
+    <p class="designation">Desenvolvedor Web</p>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon class="material-icons-outlined">home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon class="material-icons-outlined">science</mat-icon>
+      <span>Experiências</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon class="material-icons-outlined">school</mat-icon>
+      <span>Formação</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon class="material-icons-outlined">terminal</mat-icon>
+      <span>Habilidades</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon class="material-icons-outlined">whatsapp</mat-icon>
+      <span>Contato</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
