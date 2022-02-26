@@ -1,0 +1,21 @@
+.habilities > img {
+  margin-right: 10px;
+}
+
+.contact {
+  margin-top: -50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact_button {
+  margin-top: 10px;
+  transition: 1s all;
+}
+
+.contact_button:hover {
+  transform: scale(1.2);
+}

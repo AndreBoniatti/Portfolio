@@ -21,23 +21,27 @@
 
     <mat-divider></mat-divider>
 
-    <button mat-button class="menu-button">
+    <button mat-button class="menu-button" (click)="setCurrentPage('home')">
       <mat-icon class="material-icons-outlined">home</mat-icon>
       <span>Home</span>
     </button>
-    <button mat-button class="menu-button">
+    <button
+      mat-button
+      class="menu-button"
+      (click)="setCurrentPage('experience')"
+    >
       <mat-icon class="material-icons-outlined">science</mat-icon>
       <span>Experiências</span>
     </button>
-    <button mat-button class="menu-button">
+    <button
+      mat-button
+      class="menu-button"
+      (click)="setCurrentPage('graduation')"
+    >
       <mat-icon class="material-icons-outlined">school</mat-icon>
       <span>Formação</span>
     </button>
-    <button mat-button class="menu-button">
-      <mat-icon class="material-icons-outlined">terminal</mat-icon>
-      <span>Habilidades</span>
-    </button>
-    <button mat-button class="menu-button">
+    <button mat-button class="menu-button" (click)="setCurrentPage('contact')">
       <mat-icon class="material-icons-outlined">whatsapp</mat-icon>
       <span>Contato</span>
     </button>

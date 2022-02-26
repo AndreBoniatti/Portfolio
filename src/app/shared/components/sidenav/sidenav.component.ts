@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { delay } from 'rxjs/operators';
+import { SidenavService } from './sidenav.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -11,7 +12,10 @@ import { delay } from 'rxjs/operators';
 export class SidenavComponent {
   @ViewChild(MatSidenav) sidenav: MatSidenav;
 
-  constructor(private observer: BreakpointObserver) {}
+  constructor(
+    private observer: BreakpointObserver,
+    private sidenavService: SidenavService
+  ) {}
 
   ngAfterViewInit() {
     this.observer
@@ -26,5 +30,9 @@ export class SidenavComponent {
           this.sidenav.open();
         }
       });
+  }
+
+  setCurrentPage(currentPage: string): void {
+    this.sidenavService.setCurrentPage(currentPage);
   }
 }
