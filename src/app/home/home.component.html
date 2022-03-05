@@ -1,6 +1,8 @@
 <div [ngClass]="{ 'd-none': currentPage != 'home' }">
-  <h2>Sobre Mim</h2>
-  <p>Olá! Meu nome é André.</p>
+  <h2>Sobre mim</h2>
+  <p class="about_me">
+    Olá! Meu nome é André, gosto de resolver problemas e de me desafiar.
+  </p>
   <p>
     Aqui estão algumas tecnologias com as quais tenho trabalhado recentemente:
   </p>
@@ -11,24 +13,46 @@
       width="50px"
     />
     <img
+      src="https://www.cursou.com.br/wp-content/uploads/2019/12/Curso-de-Angular-200x200.png"
+      alt="angular"
+      width="50px"
+    />
+    <img
       src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
       alt="typescript"
       width="50px"
     />
     <img
-      src="http://assets.stickpng.com/images/5847ea22cef1014c0b5e4833.png"
-      alt="angular"
+      src="http://ltidecivil.tecnico.ulisboa.pt/wp-content/uploads/2019/09/HTML5_Badge_512.png"
+      alt="html"
       width="50px"
     />
+    <img src="./../../assets/images/css.png" alt="css" width="46px" />
   </div>
 </div>
 
 <div [ngClass]="{ 'd-none': currentPage != 'experience' }">
-  <p>Experiencia</p>
+  <h2>Onde eu trabalhei</h2>
+
+  <p class="dev-ibr">Desenvolvedor Web - iBR Tecnologia</p>
+  <p>Fevereiro 2020 - Presente</p>
+
+  <ul>
+    <li>
+      Desenvolvimento full stack, arquitetando e construindo novos componentes e
+      microsserviços.
+    </li>
+  </ul>
 </div>
 
 <div [ngClass]="{ 'd-none': currentPage != 'graduation' }">
-  <p>Graduação</p>
+  <h2>Formação</h2>
+
+  <p class="uri">
+    Ciência da Computação - Universidade Regional Integrada do Alto Uruguai e
+    das Missões
+  </p>
+  <p>Fevereiro 2019 - Presente</p>
 </div>
 
 <div class="contact" [ngClass]="{ 'd-none': currentPage != 'contact' }">
