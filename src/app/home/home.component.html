@@ -57,7 +57,12 @@
 
 <div class="contact" [ngClass]="{ 'd-none': currentPage != 'contact' }">
   <h2>Entre em contato</h2>
-  <button class="contact_button" mat-raised-button color="primary">
+  <button
+    class="contact_button"
+    mat-raised-button
+    color="primary"
+    (click)="teste()"
+  >
     Diga Olá
   </button>
 </div>
