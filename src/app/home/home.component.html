@@ -1,6 +1,6 @@
 <div [ngClass]="{ 'd-none': currentPage != 'home' }">
   <h2>Sobre mim</h2>
-  <p class="about_me">
+  <p class="about-me">
     Olá! Meu nome é André, gosto de resolver problemas e de me desafiar.
   </p>
   <p>
@@ -57,12 +57,22 @@
 
 <div class="contact" [ngClass]="{ 'd-none': currentPage != 'contact' }">
   <h2>Entre em contato</h2>
-  <button
-    class="contact_button"
-    mat-raised-button
-    color="primary"
-    (click)="teste()"
-  >
-    Diga Olá
+  <button class="contact-button" mat-raised-button color="primary">
+    <a class="contact-button-link" href="mailto:andre123boniatti@gmail.com"
+      >Diga Olá</a
+    >
   </button>
+
+  <div class="form-contact">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input
+        type="text"
+        matInput
+        [(ngModel)]="email"
+        placeholder="teste@mail.com"
+        (keyup.enter)="saveContact()"
+      />
+    </mat-form-field>
+  </div>
 </div>
