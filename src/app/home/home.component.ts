@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
     }
 
     this.http
-      .post<any>('http://localhost:3000/contacts', { email: this.email })
+      .post<any>('http://192.168.51.5:3000/contacts', { email: this.email })
       .subscribe(
         (res) => {
           alert(res.message);
